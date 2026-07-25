@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rohan Ayer | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/45d6f44126.js"
       crossorigin="anonymous"
@@ -11,18 +17,25 @@
     <link rel="stylesheet" href="portfolio.css" />
   </head>
   <body>
+    <!-- Ambient Background Glows -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
     <!-- === HEADER === -->
     <header class="navbar">
       <nav class="nav-container">
-        <a href="#" class="logo">Rohan Ayer</a>
+        <a href="#" class="logo">Rohan<span class="logo-accent">.Ayer</span></a>
 
         <div class="navlinks">
           <a href="#curriculum" class="navlink">Curriculum</a>
           <a href="#projects" class="navlink">Projects</a>
+          <a href="#about" class="navlink">About</a>
           <a href="#contact" class="navlink">Contact</a>
         </div>
 
-        <button class="nav-button">Ping Me</button>
+        <a href="cv.pdf" target="_blank" class="nav-button">
+          <i class="fa-solid fa-file-pdf"></i> View CV
+        </a>
       </nav>
     </header>
 
@@ -34,30 +47,35 @@
           <p class="eyebrow">Namaste, I'm</p>
           <h1 class="hero-name">Rohan Ayer</h1>
           <p class="hero-desc">
-            Full‑stack developer passionate about optimization, scalability, and
-            creating delightful user experiences.
+            Full‑stack developer passionate about optimization, scalability, and UX.
           </p>
 
           <ul class="skills">
-            <li class="skill">HTML</li>
-            <li class="skill">CSS</li>
-            <li class="skill">JavaScript</li>
+            <li class="skill"><i class="fa-brands fa-html5"></i> HTML</li>
+            <li class="skill"><i class="fa-brands fa-css3-alt"></i> CSS</li>
+            <li class="skill"><i class="fa-brands fa-js"></i> JavaScript</li>
           </ul>
 
           <div class="hero-buttons">
-            <button class="btn-primary">
+            <a href="cv.pdf" download="Nabin_Ayer_CV.pdf" class="btn-cv">
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
+            <a href="#projects" class="btn-primary">
               View My Work <i class="fa-solid fa-arrow-down"></i>
-            </button>
-            <button class="btn-secondary">Get In Touch</button>
+            </a>
+            <a href="#contact" class="btn-secondary">
+              <i class="fa-solid fa-paper-plane"></i> Get In Touch
+            </a>
           </div>
         </div>
 
         <!-- hero right -->
         <div class="hero-right">
-          <div class="portrait-container">
+          <div class="portrait-wrapper">
+            <div class="portrait-ring"></div>
             <img
-              src="https://tse3.mm.bing.net/th/id/OIP.7v4XzW94w1JmleOcwn7EYwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-              alt="Rohan Photo"
+              src="rohanprofile.jpg"
+              alt="Rohan Ayer Photo"
               class="portrait-img"
             />
           </div>
@@ -65,38 +83,118 @@
       </div>
     </section>
 
-    <!-- === PROJECT SECTION === -->
-    <section id="projects" class="projects">
-      <h2>Projects</h2>
+    <!-- === CURRICULUM SECTION === -->
+    <section id="curriculum" class="section curriculum">
+      <div class="section-title">
+        <h2>Curriculum Vitae</h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="cv-card">
+        <div class="cv-info">
+          <div class="cv-icon-wrapper">
+            <i class="fa-solid fa-file-pdf cv-icon"></i>
+          </div>
+          <div class="cv-details">
+            <h3>Nabin Ayer - Resume</h3>
+            <p>Download or view the complete CV detailing education, technical skills, and projects.</p>
+          </div>
+        </div>
+        <div class="cv-actions">
+          <a href="cv.pdf" target="_blank" class="btn-primary">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open CV
+          </a>
+          <a href="cv.pdf" download="Nabin_Ayer_CV.pdf" class="btn-cv">
+            <i class="fa-solid fa-download"></i> Download PDF
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- === PROJECTS SECTION === -->
+    <section id="projects" class="section projects">
+      <div class="section-title">
+        <h2>Projects</h2>
+        <div class="title-bar"></div>
+      </div>
       <div class="project-grid">
         <div class="project-card">
+          <div class="project-header">
+            <i class="fa-solid fa-laptop-code project-icon"></i>
+            <div class="project-links">
+              <a href="https://github.com/RohanAyer101" target="_blank" class="project-link" title="GitHub Code"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
           <h3>Portfolio Website</h3>
-          <p>Responsive personal portfolio built with HTML, CSS, and JS.</p>
+          <p>Responsive personal portfolio built with HTML, CSS, and JS featuring modern anti-gravity dark mode aesthetic.</p>
+          <div class="project-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+          </div>
         </div>
+
         <div class="project-card">
+          <div class="project-header">
+            <i class="fa-solid fa-database project-icon"></i>
+            <div class="project-links">
+              <a href="https://github.com/RohanAyer101" target="_blank" class="project-link" title="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
           <h3>Library DBMS</h3>
-          <p>SQL database project with ER diagrams and queries.</p>
+          <p>SQL database project complete with ER diagrams, optimized queries, relational schemas, and data operations.</p>
+          <div class="project-tags">
+            <span>SQL</span>
+            <span>DBMS</span>
+            <span>ER Diagrams</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- === ABOUT SECTION === -->
-    <section id="about" class="about">
-      <h2>About Me</h2>
-      <p>
-        I’m a developer who loves building scalable systems and experimenting
-        with modern web technologies. Outside coding, I enjoy anime and gaming.
-      </p>
+    <section id="about" class="section about">
+      <div class="section-title">
+        <h2>About Me</h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="about-card">
+        <p>
+          I’m a developer who loves building scalable systems and experimenting with modern web technologies. 
+          I focus on writing clean, maintainable code and delivering high-performance digital experiences.
+        </p>
+        <p>
+          Outside of coding, I’m a big fan of anime and gaming—always fascinated by rich worldbuilding, strategic challenges, and visual storytelling.
+        </p>
+      </div>
     </section>
 
     <!-- === CONTACT SECTION === -->
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>Let’s collaborate! Reach me at:</p>
-      <ul>
-        <li><i class="fa-solid fa-envelope"></i> rohanayer101@gmail.com</li>
-        <li><i class="fa-brands fa-github"></i> github.com/RohanAyer101</li>
-      </ul>
+    <section id="contact" class="section contact">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:rohanayer101@gmail.com" class="contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">Email</span>
+            <span class="contact-val">rohanayer101@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://github.com/RohanAyer101" target="_blank" class="contact-card">
+          <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-val">github.com/RohanAyer101</span>
+          </div>
+        </a>
+      </div>
     </section>
+
+    <!-- === FOOTER === -->
+    <footer class="footer">
+      <p>&copy; 2026 Rohan Ayer. Built with precision & Royal Blue theme.</p>
+    </footer>
   </body>
 </html>
