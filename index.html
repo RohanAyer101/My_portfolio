@@ -3,248 +3,634 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nabin Ayer | Graphic & Web Designer Portfolio</title>
+    <title>Nabin Ayer | Graphic & Web UI Designer Portfolio</title>
+    <meta name="description" content="Portfolio of Nabin Ayer - Graphic Designer, Web UI/UX Designer & BCA Student based in Kathmandu, Nepal. Skilled in Canva, Figma, Logo Design & Web Design." />
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    
+    <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/45d6f44126.js"
       crossorigin="anonymous"
     ></script>
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="portfolio.css" />
   </head>
   <body>
-    <!-- Ambient Silver Background Glows -->
-    <div class="bg-glow bg-glow-1"></div>
-    <div class="bg-glow bg-glow-2"></div>
+    <!-- Top Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
 
-    <!-- === HEADER === -->
-    <header class="navbar">
+    <!-- === HEADER / NAVBAR === -->
+    <header class="navbar" id="navbar">
       <nav class="nav-container">
-        <a href="#" class="logo">Nabin<span class="logo-accent">.Ayer</span></a>
+        <a href="#" class="logo">
+          Nabin<span class="logo-accent">.Ayer</span>
+          <span class="logo-sub">Designer</span>
+        </a>
 
-        <div class="navlinks">
+        <div class="navlinks" id="navlinks">
           <a href="#about" class="navlink">About</a>
-          <a href="#skills" class="navlink">Skills &amp; Tools</a>
-          <a href="#projects" class="navlink">Design Work</a>
-          <a href="#curriculum" class="navlink">Curriculum</a>
+          <a href="#skills" class="navlink">Skills</a>
+          <a href="#projects" class="navlink">Projects</a>
+          <a href="#experience" class="navlink">Experience</a>
+          <a href="#education" class="navlink brown-nav-highlight"><i class="fa-solid fa-graduation-cap"></i> Education & CV</a>
           <a href="#contact" class="navlink">Contact</a>
         </div>
 
-        <a href="cv.pdf" target="_blank" class="nav-button">
-          <i class="fa-solid fa-file-pdf"></i> View CV
-        </a>
+        <div class="nav-actions">
+          <a href="cv.pdf" download="Nabin_Ayer_CV.pdf" class="btn-cv-nav">
+            <i class="fa-solid fa-download"></i> CV
+          </a>
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
       </nav>
     </header>
 
     <!-- === HERO SECTION === -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="hero-container">
-        <!-- hero left -->
-        <div class="hero-left">
+        <div class="hero-left reveal-element">
+          <div class="status-badge">
+            <span class="pulse-dot"></span> Available for Freelance & Remote Work
+          </div>
+          
           <p class="eyebrow">Namaste, I'm</p>
           <h1 class="hero-name">Nabin Ayer</h1>
+          
+          <div class="typing-container">
+            <span class="typing-prefix">I specialize in </span>
+            <span class="typing-text" id="typing-text">Graphic Design</span>
+            <span class="typing-cursor">|</span>
+          </div>
+
           <p class="hero-desc">
-            Graphic Designer &amp; Web Designer crafting visually engaging digital content, modern UI/UX layouts, and brand identities with a sleek Silver &amp; Metallic aesthetic.
+            Creative Graphic &amp; Web UI Designer based in Kathmandu, Nepal. Crafting visual identities, social media templates, and clean website UI layouts with a focus on modern aesthetics and client satisfaction.
           </p>
 
-          <ul class="skills">
-            <li class="skill"><i class="fa-solid fa-pen-nib"></i> Canva (Expert)</li>
-            <li class="skill"><i class="fa-brands fa-figma"></i> Figma (UI/UX)</li>
-            <li class="skill"><i class="fa-solid fa-palette"></i> Adobe Creative Suite</li>
-            <li class="skill"><i class="fa-brands fa-html5"></i> HTML5 &amp; CSS3</li>
-          </ul>
+          <div class="hero-skills-row">
+            <span class="hero-chip"><i class="fa-solid fa-wand-magic-sparkles"></i> Canva Pro</span>
+            <span class="hero-chip"><i class="fa-brands fa-figma"></i> Figma UI/UX</span>
+            <span class="hero-chip"><i class="fa-solid fa-paint-brush"></i> Logo &amp; Branding</span>
+            <span class="hero-chip"><i class="fa-solid fa-brain"></i> AI Ideation</span>
+          </div>
 
           <div class="hero-buttons">
-            <a href="cv.pdf" download="Nabin_Ayer_CV.pdf" class="btn-cv">
-              <i class="fa-solid fa-download"></i> Download CV
-            </a>
             <a href="#projects" class="btn-primary">
-              View Design Work <i class="fa-solid fa-arrow-down"></i>
+              Explore Projects <i class="fa-solid fa-arrow-down"></i>
             </a>
-            <a href="#contact" class="btn-secondary">
-              <i class="fa-solid fa-paper-plane"></i> Get In Touch
+            <a href="cv.pdf" download="Nabin_Ayer_CV.pdf" class="btn-secondary">
+              <i class="fa-solid fa-file-pdf"></i> Download CV
+            </a>
+            <a href="#contact" class="btn-outline">
+              <i class="fa-solid fa-paper-plane"></i> Contact Me
             </a>
           </div>
         </div>
 
-        <!-- hero right -->
-        <div class="hero-right">
+        <div class="hero-right reveal-element">
           <div class="portrait-wrapper">
-            <div class="portrait-ring"></div>
-            <img
-              src="rohanprofile.jpg"
-              alt="Nabin Ayer Photo"
-              class="portrait-img"
-            />
+            <div class="portrait-card">
+              <img
+                src="rohanprofile.jpg"
+                alt="Nabin Ayer - Graphic & Web Designer"
+                class="portrait-img"
+              />
+              <div class="portrait-badge badge-top">
+                <i class="fa-solid fa-palette"></i>
+                <div>
+                  <strong>Graphic & UI</strong>
+                  <span>Designer</span>
+                </div>
+              </div>
+              <div class="portrait-badge badge-bottom">
+                <i class="fa-brands fa-upwork"></i>
+                <div>
+                  <strong>Upwork Freelancer</strong>
+                  <span>Collaborative Profile</span>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === QUICK STATS BAR === -->
+    <section class="stats-bar">
+      <div class="stats-container">
+        <div class="stat-item reveal-element">
+          <div class="stat-num" data-target="4">4th</div>
+          <div class="stat-label">Semester BCA Student</div>
+        </div>
+        <div class="stat-item reveal-element">
+          <div class="stat-num" data-target="100">100%</div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+        <div class="stat-item reveal-element">
+          <div class="stat-num" data-target="3">3+</div>
+          <div class="stat-label">Languages (NP, EN, HI)</div>
+        </div>
+        <div class="stat-item reveal-element">
+          <div class="stat-num" data-target="10">Multiple</div>
+          <div class="stat-label">Delivered Projects</div>
         </div>
       </div>
     </section>
 
     <!-- === ABOUT SECTION === -->
     <section id="about" class="section about">
-      <div class="section-title">
+      <div class="section-header reveal-element">
+        <span class="section-tag">BACKGROUND</span>
         <h2>About Me</h2>
         <div class="title-bar"></div>
       </div>
-      <div class="about-card">
-        <p>
-          I am a creative Graphic Designer &amp; Web Designer with a strong passion for visual branding, UI/UX aesthetics, and digital marketing design. 
-          Currently pursuing my Bachelor of Computer Applications (BCA, 4th Semester) at Universal College, I blend technical web fundamentals with modern design principles.
-        </p>
-        <p>
-          I specialize in creating social media graphics, promotional posters, interactive web layouts, and brand identity materials using tools like 
-          <strong>Canva</strong>, <strong>Figma</strong>, and hands-on experience with <strong>Adobe Creative Suite</strong> (Photoshop &amp; Illustrator).
-        </p>
+      
+      <div class="about-grid">
+        <div class="about-card main-about reveal-element">
+          <h3>Passionate Graphic &amp; Web UI Designer</h3>
+          <p>
+            I am a creative and detail-oriented Graphic Designer with hands-on freelance experience in logo design, social media content, and web UI design. Currently pursuing my <strong>Bachelor of Computer Applications (BCA, 4th Semester)</strong> at Universal College, Kathmandu.
+          </p>
+          <p>
+            I combine foundational computer science &amp; web concepts with modern design aesthetics. I am skilled in tools like <strong>Canva</strong> and <strong>Figma</strong>, possessing a strong eye for visual branding, color psychology, and user-friendly layouts.
+          </p>
+          <p>
+            Additionally, I leverage modern generative AI tools like <strong>ChatGPT, Claude, and Gemini</strong> for rapid idea generation, copywriting assistance, and design workflow optimization.
+          </p>
+
+          <div class="info-chips">
+            <div class="chip-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Kathmandu, Nepal</span>
+            </div>
+            <div class="chip-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>rohanayer101@gmail.com</span>
+            </div>
+            <div class="chip-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+977 9805741147</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card highlight-box reveal-element">
+          <h3>Core Focus Areas</h3>
+          <ul class="focus-list">
+            <li>
+              <div class="focus-icon"><i class="fa-solid fa-object-group"></i></div>
+              <div>
+                <strong>Logo &amp; Visual Identity</strong>
+                <p>Creating distinct, memorable logo concepts and visual guidelines for diverse niches.</p>
+              </div>
+            </li>
+            <li>
+              <div class="focus-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+              <div>
+                <strong>Web UI &amp; Wireframing</strong>
+                <p>Prototyping clean, modern, and user-friendly web layouts using Figma.</p>
+              </div>
+            </li>
+            <li>
+              <div class="focus-icon"><i class="fa-solid fa-rectangle-ad"></i></div>
+              <div>
+                <strong>Social Media &amp; Posters</strong>
+                <p>Designing high-converting marketing posts, banners, and promotional artwork.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- === SKILLS & TOOLS SECTION === -->
+    <!-- === SKILLS SECTION === -->
     <section id="skills" class="section skills-section">
-      <div class="section-title">
+      <div class="section-header reveal-element">
+        <span class="section-tag">CAPABILITIES</span>
         <h2>Skills &amp; Design Tools</h2>
         <div class="title-bar"></div>
       </div>
-      <div class="project-grid">
-        <div class="project-card">
-          <div class="project-header">
-            <i class="fa-solid fa-wand-magic-sparkles project-icon"></i>
-          </div>
-          <h3>UI/UX &amp; Graphic Design Tools</h3>
-          <p>Proficient in layout prototyping, brand asset creation, and visual hierarchy design.</p>
-          <div class="project-tags">
-            <span>Canva Pro</span>
-            <span>Figma Prototyping</span>
-            <span>Adobe Photoshop</span>
-            <span>Adobe Illustrator</span>
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-header">
-            <i class="fa-solid fa-code project-icon"></i>
-          </div>
-          <h3>Front-End Web Design</h3>
-          <p>Translating UI concepts into responsive, high-performance HTML/CSS web interfaces.</p>
-          <div class="project-tags">
-            <span>HTML5</span>
-            <span>CSS3 (Flexbox/Grid)</span>
-            <span>JavaScript (ES6+)</span>
-            <span>Responsive Web Design</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- === DESIGN PROJECTS SECTION === -->
-    <section id="projects" class="section projects">
-      <div class="section-title">
-        <h2>Featured Design Projects</h2>
-        <div class="title-bar"></div>
-      </div>
-      <div class="project-grid">
-        <div class="project-card">
-          <div class="project-header">
-            <i class="fa-solid fa-object-group project-icon"></i>
-            <div class="project-links">
-              <a href="https://github.com/RohanAyer101" target="_blank" class="project-link" title="GitHub Code"><i class="fa-brands fa-github"></i></a>
+      <div class="skills-grid">
+        <!-- Design Tools Card -->
+        <div class="skill-card reveal-element">
+          <div class="card-icon-title">
+            <div class="icon-circle"><i class="fa-solid fa-layer-group"></i></div>
+            <div>
+              <h3>Primary Design Tools</h3>
+              <p>Essential software used for daily creative execution</p>
             </div>
           </div>
-          <h3>Personal Portfolio Website</h3>
-          <p>Sleek, responsive personal portfolio built with HTML, CSS, and JS featuring a modern Silver &amp; Grey metallic dark theme.</p>
-          <div class="project-tags">
-            <span>Silver &amp; Grey UI</span>
-            <span>HTML5/CSS3</span>
-            <span>Figma Wireframing</span>
+
+          <div class="progress-bar-group">
+            <div class="progress-item">
+              <div class="progress-info">
+                <span>Canva Pro</span>
+                <span class="pct">95%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 95%;"></div></div>
+            </div>
+
+            <div class="progress-item">
+              <div class="progress-info">
+                <span>Figma (UI/UX & Prototyping)</span>
+                <span class="pct">88%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
+            </div>
+
+            <div class="progress-item">
+              <div class="progress-info">
+                <span>AI Design Tools (ChatGPT / Claude / Gemini)</span>
+                <span class="pct">90%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+            </div>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-header">
-            <i class="fa-solid fa-photo-film project-icon"></i>
+        <!-- Design Skills Card -->
+        <div class="skill-card reveal-element">
+          <div class="card-icon-title">
+            <div class="icon-circle"><i class="fa-solid fa-pen-ruler"></i></div>
+            <div>
+              <h3>Specialized Design Skills</h3>
+              <p>Key artistic and technical competencies</p>
+            </div>
           </div>
-          <h3>Social Media Content Design</h3>
-          <p>Engaging promotional posts, banners, and digital marketing materials focused on audience engagement and color psychology.</p>
-          <div class="project-tags">
-            <span>Canva</span>
-            <span>Figma</span>
-            <span>Brand Identity</span>
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-header">
-            <i class="fa-solid fa-bullhorn project-icon"></i>
-          </div>
-          <h3>Promotional Campaign Design</h3>
-          <p>Marketing posters, product templates, and campaign collateral designed using visual hierarchy and modern typography.</p>
-          <div class="project-tags">
-            <span>Adobe Suite</span>
-            <span>Poster Design</span>
-            <span>Visual Marketing</span>
+          <div class="skills-tags-cloud">
+            <span class="tag-pill"><i class="fa-solid fa-check"></i> Graphic Design</span>
+            <span class="tag-pill"><i class="fa-solid fa-check"></i> Logo Design</span>
+            <span class="tag-pill"><i class="fa-solid fa-check"></i> Social Media Post Design</span>
+            <span class="tag-pill"><i class="fa-solid fa-check"></i> Web UI Layouts</span>
+            <span class="tag-pill"><i class="fa-solid fa-check"></i> Visual Branding</span>
+            <span class="tag-pill"><i class="fa-solid fa-check"></i> Layout &amp; Composition</span>
+            <span class="tag-pill"><i class="fa-solid fa-check"></i> Creative Thinking</span>
+            <span class="tag-pill"><i class="fa-solid fa-check"></i> Digital Marketing Basics</span>
+            <span class="tag-pill"><i class="fa-solid fa-check"></i> HTML5 &amp; CSS3 Basics</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- === CURRICULUM SECTION === -->
-    <section id="curriculum" class="section curriculum">
-      <div class="section-title">
-        <h2>Curriculum Vitae</h2>
+    <!-- === SMALL PROJECTS SECTION === -->
+    <section id="projects" class="section projects-section">
+      <div class="section-header reveal-element">
+        <span class="section-tag">MY WORK</span>
+        <h2>Small Projects &amp; Portfolio Works</h2>
+        <p class="section-sub">A collection of graphic design concepts, social media templates, and Figma web UI projects.</p>
         <div class="title-bar"></div>
       </div>
-      <div class="cv-card">
-        <div class="cv-info">
-          <div class="cv-icon-wrapper">
-            <i class="fa-solid fa-file-pdf cv-icon"></i>
+
+      <!-- Filter Buttons -->
+      <div class="project-filters reveal-element">
+        <button class="filter-btn active" data-filter="all">All Works</button>
+        <button class="filter-btn" data-filter="graphic">Graphic &amp; Logos</button>
+        <button class="filter-btn" data-filter="social">Social Media &amp; Posters</button>
+        <button class="filter-btn" data-filter="webui">Web UI/UX</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="small-projects-grid">
+        <!-- Project 1 -->
+        <div class="small-project-card reveal-element" data-category="graphic">
+          <div class="card-header-top">
+            <div class="card-badge"><i class="fa-solid fa-bullseye"></i> Logo Design</div>
+            <span class="project-year">2026</span>
           </div>
-          <div class="cv-details">
-            <h3>Nabin Ayer - Resume</h3>
-            <p>Download or view the complete CV detailing education, design tools, and portfolio work.</p>
+          <h3>Brand Logo Concepts &amp; Identities</h3>
+          <p>
+            Designed multiple custom logo concepts tailored for different business niches. Focused on minimalism, visual balance, and memorable brand identity.
+          </p>
+          <div class="card-tech-list">
+            <span>Canva</span>
+            <span>Figma</span>
+            <span>Vector Styling</span>
+            <span>Brand Identity</span>
+          </div>
+          <div class="card-footer-actions">
+            <button class="btn-card-detail" onclick="openProjectModal('logo-modal')">
+              <i class="fa-solid fa-circle-info"></i> View Details
+            </button>
           </div>
         </div>
-        <div class="cv-actions">
-          <a href="cv.pdf" target="_blank" class="btn-primary">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open CV
-          </a>
-          <a href="cv.pdf" download="Nabin_Ayer_CV.pdf" class="btn-cv">
-            <i class="fa-solid fa-download"></i> Download PDF
-          </a>
+
+        <!-- Project 2 -->
+        <div class="small-project-card reveal-element" data-category="social">
+          <div class="card-header-top">
+            <div class="card-badge"><i class="fa-solid fa-photo-film"></i> Social Media</div>
+            <span class="project-year">2026</span>
+          </div>
+          <h3>Social Media Marketing Post Templates</h3>
+          <p>
+            Created engaging promotional posts and Instagram/Facebook graphics optimized for online advertising, brand promotion, and high audience engagement.
+          </p>
+          <div class="card-tech-list">
+            <span>Canva Pro</span>
+            <span>Content Strategy</span>
+            <span>Color Psychology</span>
+            <span>Marketing Ads</span>
+          </div>
+          <div class="card-footer-actions">
+            <button class="btn-card-detail" onclick="openProjectModal('social-modal')">
+              <i class="fa-solid fa-circle-info"></i> View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="small-project-card reveal-element" data-category="social">
+          <div class="card-header-top">
+            <div class="card-badge"><i class="fa-solid fa-scroll"></i> Posters</div>
+            <span class="project-year">2025 - 2026</span>
+          </div>
+          <h3>Promotional Poster Designs</h3>
+          <p>
+            Developed creative poster graphics for events, marketing campaigns, and product promotions using strong visual hierarchy and modern typography.
+          </p>
+          <div class="card-tech-list">
+            <span>Canva</span>
+            <span>Layout Design</span>
+            <span>Typography</span>
+            <span>Promotions</span>
+          </div>
+          <div class="card-footer-actions">
+            <button class="btn-card-detail" onclick="openProjectModal('poster-modal')">
+              <i class="fa-solid fa-circle-info"></i> View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="small-project-card reveal-element" data-category="webui">
+          <div class="card-header-top">
+            <div class="card-badge"><i class="fa-solid fa-desktop"></i> Figma UI/UX</div>
+            <span class="project-year">2026</span>
+          </div>
+          <h3>Web UI Layouts &amp; Figma Wireframes</h3>
+          <p>
+            Designed clean, intuitive, and fully responsive website UI layouts in Figma. Focused on user experience, structured components, and crisp alignment.
+          </p>
+          <div class="card-tech-list">
+            <span>Figma</span>
+            <span>UI Prototyping</span>
+            <span>Wireframing</span>
+            <span>User Experience</span>
+          </div>
+          <div class="card-footer-actions">
+            <button class="btn-card-detail" onclick="openProjectModal('webui-modal')">
+              <i class="fa-solid fa-circle-info"></i> View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="small-project-card reveal-element" data-category="webui">
+          <div class="card-header-top">
+            <div class="card-badge"><i class="fa-solid fa-code"></i> Front-End</div>
+            <span class="project-year">2026</span>
+          </div>
+          <h3>Personal Portfolio Web App</h3>
+          <p>
+            Built an interactive, modern portfolio website featuring custom styling, dynamic scroll animations, light silver/grey theme, and structured CV layout.
+          </p>
+          <div class="card-tech-list">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Responsive Layout</span>
+          </div>
+          <div class="card-footer-actions">
+            <button class="btn-card-detail" onclick="openProjectModal('portfolio-modal')">
+              <i class="fa-solid fa-circle-info"></i> View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === FREELANCE EXPERIENCE SECTION === -->
+    <section id="experience" class="section experience-section">
+      <div class="section-header reveal-element">
+        <span class="section-tag">EXPERIENCE</span>
+        <h2>Freelance Experience</h2>
+        <div class="title-bar"></div>
+      </div>
+
+      <div class="exp-card reveal-element">
+        <div class="exp-header">
+          <div class="exp-title-group">
+            <div class="exp-icon"><i class="fa-brands fa-upwork"></i></div>
+            <div>
+              <h3>Freelance Graphic Designer</h3>
+              <span class="exp-company">Upwork (Collaborative Profile)</span>
+            </div>
+          </div>
+          <span class="exp-badge">Active Experience</span>
+        </div>
+
+        <ul class="exp-bullets">
+          <li><i class="fa-solid fa-circle-check"></i> Designed logos, social media templates, and promotional posters for various international and local clients.</li>
+          <li><i class="fa-solid fa-circle-check"></i> Created modern and user-friendly web UI designs using Figma tailored to client specifications.</li>
+          <li><i class="fa-solid fa-circle-check"></i> Worked closely on client requirements and delivered high-quality design assets based on brand needs.</li>
+          <li><i class="fa-solid fa-circle-check"></i> Practiced fast idea generation and creative brainstorming using AI tools like ChatGPT, Claude, and Gemini.</li>
+          <li><i class="fa-solid fa-circle-check"></i> Maintained strict consistency in design quality and consistently met client expectations and deadlines.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- === EDUCATION & CV SECTION (LIGHT ROYAL BROWN THEME) === -->
+    <section id="education" class="section education-section brown-theme-section">
+      <div class="brown-section-wrapper">
+        <div class="section-header reveal-element">
+          <span class="brown-section-tag"><i class="fa-solid fa-crown"></i> ACADEMICS &amp; RESUME</span>
+          <h2 class="brown-heading">Education &amp; Curriculum Vitae</h2>
+          <p class="brown-subheading">Detailed educational background and verified resume details as listed in official CV.</p>
+          <div class="brown-title-bar"></div>
+        </div>
+
+        <div class="education-grid">
+          <!-- Timeline / Education Cards -->
+          <div class="education-list">
+            <!-- Edu Item 1 -->
+            <div class="brown-edu-card reveal-element">
+              <div class="brown-card-header">
+                <div class="brown-icon-box">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="brown-edu-info">
+                  <span class="brown-year">Current Degree (4th Semester)</span>
+                  <h3>Bachelor of Computer Applications (BCA)</h3>
+                  <h4 class="brown-school">Universal College, Kathmandu, Nepal</h4>
+                </div>
+              </div>
+              <p class="brown-edu-desc">
+                Pursuing degree focused on computer science fundamentals, web technology, database management, software engineering, and digital interfaces. Combining technical BCA knowledge with creative web UI design.
+              </p>
+            </div>
+
+            <!-- Edu Item 2 -->
+            <div class="brown-edu-card reveal-element">
+              <div class="brown-card-header">
+                <div class="brown-icon-box">
+                  <i class="fa-solid fa-school"></i>
+                </div>
+                <div class="brown-edu-info">
+                  <span class="brown-year">+2 High School Graduation</span>
+                  <h3>+2 in Management (Computer Commerce)</h3>
+                  <h4 class="brown-school">Little Buddha Academy</h4>
+                </div>
+              </div>
+              <p class="brown-edu-desc">
+                Specialized in Computer Commerce and Management, gaining core knowledge in digital business, marketing principles, computer applications, and commercial communications.
+              </p>
+            </div>
+          </div>
+
+          <!-- CV Download & Highlights Box -->
+          <div class="brown-cv-card reveal-element">
+            <div class="cv-badge-royal"><i class="fa-solid fa-award"></i> Verified Document</div>
+            <div class="brown-cv-content">
+              <i class="fa-solid fa-file-pdf brown-pdf-icon"></i>
+              <h3>Nabin Ayer - Official CV</h3>
+              <p>
+                Complete resume containing professional summary, skills matrix, freelance projects, educational details, and languages.
+              </p>
+              
+              <div class="cv-languages">
+                <strong>Languages Spoken:</strong>
+                <div class="lang-chips">
+                  <span><i class="fa-solid fa-language"></i> Nepali (Native)</span>
+                  <span><i class="fa-solid fa-language"></i> English (Fluent)</span>
+                  <span><i class="fa-solid fa-language"></i> Hindi (Conversational)</span>
+                </div>
+              </div>
+
+              <div class="brown-cv-buttons">
+                <a href="cv.pdf" target="_blank" class="btn-brown-primary">
+                  <i class="fa-solid fa-eye"></i> View PDF Inline
+                </a>
+                <a href="cv.pdf" download="Nabin_Ayer_CV.pdf" class="btn-brown-secondary">
+                  <i class="fa-solid fa-download"></i> Download CV (.pdf)
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- === CONTACT SECTION === -->
-    <section id="contact" class="section contact">
-      <div class="section-title">
-        <h2>Contact</h2>
+    <section id="contact" class="section contact-section">
+      <div class="section-header reveal-element">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2>Contact &amp; Hire Me</h2>
+        <p class="section-sub">Feel free to reach out for freelance projects, design inquiries, or collaborations.</p>
         <div class="title-bar"></div>
       </div>
-      <div class="contact-grid">
-        <a href="mailto:rohanayer101@gmail.com" class="contact-card">
-          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-          <div class="contact-info">
-            <span class="contact-label">Email</span>
-            <span class="contact-val">rohanayer101@gmail.com</span>
+
+      <div class="contact-container">
+        <!-- Contact Information Cards -->
+        <div class="contact-cards-group reveal-element">
+          <!-- Email Card -->
+          <div class="contact-item-card">
+            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="c-detail">
+              <span class="c-label">Direct Email</span>
+              <strong class="c-val">rohanayer101@gmail.com</strong>
+            </div>
+            <button class="copy-btn" onclick="copyText('rohanayer101@gmail.com', this)" title="Copy Email">
+              <i class="fa-regular fa-copy"></i>
+            </button>
           </div>
-        </a>
-        <a href="https://github.com/RohanAyer101" target="_blank" class="contact-card">
-          <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
-          <div class="contact-info">
-            <span class="contact-label">GitHub</span>
-            <span class="contact-val">github.com/RohanAyer101</span>
+
+          <!-- Phone Card -->
+          <div class="contact-item-card">
+            <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="c-detail">
+              <span class="c-label">Phone / Mobile</span>
+              <strong class="c-val">+977 9805741147</strong>
+            </div>
+            <button class="copy-btn" onclick="copyText('+9779805741147', this)" title="Copy Phone Number">
+              <i class="fa-regular fa-copy"></i>
+            </button>
           </div>
-        </a>
+
+          <!-- Location Card -->
+          <div class="contact-item-card">
+            <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="c-detail">
+              <span class="c-label">Current Location</span>
+              <strong class="c-val">Kathmandu, Nepal</strong>
+            </div>
+          </div>
+
+          <!-- GitHub Card -->
+          <a href="https://github.com/RohanAyer101" target="_blank" class="contact-item-card link-card">
+            <div class="c-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="c-detail">
+              <span class="c-label">GitHub Profile</span>
+              <strong class="c-val">github.com/RohanAyer101</strong>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square external-link-icon"></i>
+          </a>
+        </div>
+
+        <!-- Quick Message Form -->
+        <div class="contact-form-card reveal-element">
+          <h3>Send Me a Message</h3>
+          <form id="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input type="text" id="form-name" placeholder="Enter your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="form-email">Your Email</label>
+              <input type="email" id="form-email" placeholder="name@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="form-message">Project / Message Details</label>
+              <textarea id="form-message" rows="4" placeholder="Describe your design project or inquiry..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit-btn">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+            <div id="form-status" class="form-status-msg"></div>
+          </form>
+        </div>
       </div>
     </section>
 
     <!-- === FOOTER === -->
     <footer class="footer">
-      <p>&copy; 2026 Nabin Ayer. Designed with precision &amp; Silver &amp; Grey metallic theme.</p>
+      <div class="footer-content">
+        <p>&copy; 2026 Nabin Ayer. All rights reserved.</p>
+        <p class="footer-sub">Graphic Designer &amp; Web UI Specialist | BCA Student at Universal College</p>
+        <a href="#hero" class="back-to-top" title="Back to top">
+          <i class="fa-solid fa-chevron-up"></i>
+        </a>
+      </div>
     </footer>
+
+    <!-- === PROJECT MODALS === -->
+    <div id="modal-backdrop" class="modal-backdrop" onclick="closeProjectModal()">
+      <div class="modal-container" onclick="event.stopPropagation()">
+        <button class="modal-close-btn" onclick="closeProjectModal()">&times;</button>
+        <div id="modal-body-content"></div>
+      </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="portfolio.js"></script>
   </body>
 </html>
